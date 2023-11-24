@@ -16,4 +16,14 @@ function main() {
     putRandomEmojiToTitle()
 }
 
+window.copyEmail = async () => {
+    const email = document.getElementById('email').innerText
+    await navigator.clipboard.writeText(email)
+
+    document.getElementById('email-popover').innerText = 'Copied!'
+    setTimeout(() =>  {
+        document.getElementById('email-popover').innerText = 'Copy'
+    }, 2000)
+}
+
 main()

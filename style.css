@@ -158,3 +158,19 @@ i {
     font-weight: bold;
     letter-spacing: 0.03em;
 }
+
+#email-popover {
+    position: absolute;
+    background-color: black;
+    font-size: 0.6em;
+    padding: 0.5em 1em;
+    border: solid 1px white;
+    border-radius: 10px;
+    margin-left: 6em;
+    opacity: 0;
+}
+
+#email:hover + #email-popover {
+    opacity: 1;
+    transition: all 0.5s;
+}
