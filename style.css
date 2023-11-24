@@ -43,11 +43,8 @@ ul {
     padding: 2.5em;
 
     & a {
-        text-underline-offset: 4px;
-    }
-
-    & a:visited {
         color: white;
+        text-underline-offset: 4px;
     }
 }
 
