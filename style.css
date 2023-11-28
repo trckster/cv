@@ -159,18 +159,22 @@ i {
     letter-spacing: 0.03em;
 }
 
-#email-popover {
-    position: absolute;
-    background-color: black;
-    font-size: 0.6em;
-    padding: 0.5em 1em;
-    border: solid 1px white;
-    border-radius: 10px;
-    margin-left: 6em;
+.copy {
+    vertical-align: center;
+    opacity: 0.7;
+    margin-left: 0.3em;
+    cursor: pointer;
+}
+
+.copy:active {
+    opacity: 0.5;
+}
+
+.invisible {
+    transition: 3s;
     opacity: 0;
 }
 
-#email:hover + #email-popover {
-    opacity: 1;
-    transition: all 0.5s;
+#email-copy-notification {
+    margin-left: 0.3em;
 }
