@@ -239,6 +239,10 @@ i {
             transition: 0.3s;
             background-color: #005ba2;
             color: white;
+
+            & img {
+                content: url("/white-download.png");
+            }
         }
     }
 }
