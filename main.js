@@ -5,6 +5,17 @@ function showCopyNotification() {
     setTimeout(() => element.classList.add('invisible'), 50)
 }
 
+function showDownloadOptions() {
+    document.getElementById('download-button').style.transition = ''
+    document.getElementById('download-options').style.display = 'block'
+    document.getElementById('download-button').style.borderRadius = '7px 7px 0 0'
+}
+
+function closeDownloadOptions() {
+    document.getElementById('download-options').style.display = 'none'
+    document.getElementById('download-button').style.borderRadius = '7px'
+}
+
 window.copyEmail = async () => {
     const email = document.getElementById('email').innerText
     await navigator.clipboard.writeText(email)
@@ -13,13 +24,17 @@ window.copyEmail = async () => {
 
 window.showDownloadOptions = () => {
     const element = document.getElementById('download-options')
-    element.style.display = element.style.display === 'block' ? 'none' : 'block'
+    if (element.style.display === 'block') {
+        closeDownloadOptions()
+    } else {
+        showDownloadOptions()
+    }
 }
 
 document.addEventListener('mouseup', (e) => {
     const downloadButton = document.getElementsByClassName('download')[0]
 
     if (!downloadButton.contains(e.target)) {
-        document.getElementById('download-options').style.display = 'none'
+        closeDownloadOptions()
     }
 })

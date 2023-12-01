@@ -111,13 +111,19 @@
     <header>
         Backend Developer
         <div class="download">
-            <div class="download-button" onclick="showDownloadOptions()">
+            <div id="download-button" onclick="showDownloadOptions()">
                 <div>Download CV</div>
-                <img src="/blue-arrow.png" alt="Download"/>
+                <img src="/blue-arrow.png" alt="Arrow"/>
             </div>
             <ul id="download-options" class="list-no-dot">
-                <li class="download-button">Download as .pdf</li>
-                <li class="download-button">Download as .png</li>
+                <li>
+                    Download as .pdf
+                    <img class="icon" src="/download.png" alt="Download"/>
+                </li>
+                <li>
+                    Download as .png
+                    <img class="icon" src="/download.png" alt="Download"/>
+                </li>
             </ul>
         </div>
     </header>

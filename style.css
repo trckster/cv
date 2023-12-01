@@ -190,7 +190,7 @@ i {
     width: 200px;
 }
 
-.download-button {
+#download-button {
     padding: 0.8em;
     border: solid #003a64 1px;
     border-radius: 7px;
@@ -209,6 +209,7 @@ i {
         background-color: #005ba2;
         color: white;
         cursor: pointer;
+        transition: color 0.3s, background-color 0.3s;
 
         & img {
             content: url("/white-arrow.png");
@@ -217,11 +218,27 @@ i {
 }
 
 #download-options {
+    padding: 0;
     width: inherit;
     position: absolute;
-    padding: 0;
+    border: solid #005ba2 1px;
+    border-radius: 0 0 5px 5px;
+    border-top: none;
+    display: none;
 
     & li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
         margin-bottom: 0;
+        cursor: pointer;
+        padding: 0.8em;
+
+        &:hover {
+            transition: 0.3s;
+            background-color: #005ba2;
+            color: white;
+        }
     }
 }
