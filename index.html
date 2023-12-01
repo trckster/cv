@@ -27,8 +27,10 @@
                 <li>
                     <img src="/mail.png" alt="Email" class="icon"/>
                     <span id="email">daniil@vivaldi.net</span>
-                    <svg class="copy" onclick="copyEmail()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2Zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6ZM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1H2Z"/>
+                    <svg class="copy" onclick="copyEmail()" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                         fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                              d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2Zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6ZM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1H2Z"/>
                     </svg>
                     <span id="email-copy-notification" class="invisible">Copied!</span>
                 </li>
@@ -52,6 +54,7 @@
         <div class="section-header">Key Skills</div>
         <div class="parallel-list">
             <ul>
+                <!-- Change title and key skills-->
                 <li>PHP (Laravel)</li>
                 <li>Vue.js + Nuxt.js</li>
                 <li>Typescript</li>
@@ -105,7 +108,19 @@
 </div>
 
 <div class="right">
-    <header>Backend Developer</header>
+    <header>
+        Backend Developer
+        <div class="download">
+            <div class="download-button" onclick="showDownloadOptions()">
+                <div>Download CV</div>
+                <img src="/blue-arrow.png" alt="Download"/>
+            </div>
+            <ul id="download-options" class="list-no-dot">
+                <li class="download-button">Download as .pdf</li>
+                <li class="download-button">Download as .png</li>
+            </ul>
+        </div>
+    </header>
     <div class="section">
         <div class="section-header">Work experience</div>
 

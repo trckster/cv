@@ -54,8 +54,10 @@ ul {
     min-width: 22em;
 
     & header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         color: #005ba2;
-        text-align: left;
         margin-bottom: 1.6em;
     }
 
@@ -177,4 +179,49 @@ i {
 
 #email-copy-notification {
     margin-left: 0.3em;
+}
+
+.download {
+    user-select: none;
+    color: #003a64;
+    letter-spacing: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    width: 200px;
+}
+
+.download-button {
+    padding: 0.8em;
+    border: solid #003a64 1px;
+    border-radius: 7px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    & img {
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+
+    &:hover {
+        background-color: #005ba2;
+        color: white;
+        cursor: pointer;
+
+        & img {
+            content: url("/white-arrow.png");
+        }
+    }
+}
+
+#download-options {
+    width: inherit;
+    position: absolute;
+    padding: 0;
+
+    & li {
+        margin-bottom: 0;
+    }
 }
