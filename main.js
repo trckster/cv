@@ -38,3 +38,12 @@ document.addEventListener('mouseup', (e) => {
         closeDownloadOptions()
     }
 })
+
+window.download = (file) => {
+    const element = document.createElement('a');
+    document.body.appendChild(element);
+    element.download = 'Trofimov Daniil CV';
+    element.href = file;
+    element.click();
+    document.body.removeChild(element);
+}
