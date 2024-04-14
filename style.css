@@ -197,7 +197,7 @@ i {
         transition: color 0.3s, background-color 0.3s;
 
         & img {
-            content: url("/white-arrow.png");
+            content: url("assets/white-arrow.png");
         }
     }
 }
@@ -227,7 +227,7 @@ i {
             color: white;
 
             & img {
-                content: url("/white-download.png");
+                content: url("assets/white-download.png");
             }
         }
     }
