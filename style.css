@@ -233,6 +233,17 @@ i {
     }
 }
 
+.preferred-channel {
+    position: absolute;
+    height: 8em;
+    top: -14px;
+    left: 80px;
+}
+
+.position-relative {
+    position: relative;
+}
+
 @media (max-width: 1200px) {
     .right header {
         flex-direction: column;
