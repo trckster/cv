@@ -1,49 +1,69 @@
-function showCopyNotification() {
-    const element = document.getElementById('email-copy-notification')
+const copyNotification = document.getElementById('email-copy-notification')
+const downloadButton = document.getElementById('download-button')
+const downloadOptions = document.getElementById('download-options')
+const themeToggle = document.getElementById('theme-toggle')
+const themeStorageKey = 'cv-theme'
+let copyNotificationTimeout
 
-    element.classList.remove('invisible')
-    setTimeout(() => element.classList.add('invisible'), 50)
+function applyTheme(theme) {
+    const normalizedTheme = theme === 'light' ? 'light' : 'dark'
+
+    document.documentElement.dataset.theme = normalizedTheme
+    themeToggle.setAttribute(
+        'aria-label',
+        normalizedTheme === 'light' ? 'Switch to dark theme' : 'Switch to light theme',
+    )
 }
 
-function showDownloadOptions() {
-    document.getElementById('download-button').style.transition = ''
-    document.getElementById('download-options').style.display = 'block'
-    document.getElementById('download-button').style.borderRadius = '7px 7px 0 0'
+applyTheme(localStorage.getItem(themeStorageKey))
+
+function showCopyNotification() {
+    clearTimeout(copyNotificationTimeout)
+    copyNotification.textContent = 'Copied!'
+    copyNotification.classList.add('is-copied')
+
+    copyNotificationTimeout = setTimeout(() => {
+        copyNotification.textContent = 'Copy?'
+        copyNotification.classList.remove('is-copied')
+    }, 1200)
 }
 
 function closeDownloadOptions() {
-    document.getElementById('download-options').style.display = 'none'
-    document.getElementById('download-button').style.borderRadius = '7px'
+    downloadOptions.classList.remove('is-open')
+    downloadButton.setAttribute('aria-expanded', 'false')
 }
 
 window.copyEmail = async () => {
-    const email = document.getElementById('email').innerText
+    const email = document.getElementById('email').textContent.trim()
     await navigator.clipboard.writeText(email)
     showCopyNotification()
 }
 
 window.showDownloadOptions = () => {
-    const element = document.getElementById('download-options')
-    if (element.style.display === 'block') {
-        closeDownloadOptions()
-    } else {
-        showDownloadOptions()
-    }
+    const isOpen = downloadOptions.classList.toggle('is-open')
+    downloadButton.setAttribute('aria-expanded', String(isOpen))
 }
 
-document.addEventListener('mouseup', (e) => {
-    const downloadButton = document.getElementsByClassName('download')[0]
-
-    if (!downloadButton.contains(e.target)) {
+document.addEventListener('mouseup', (event) => {
+    if (!document.querySelector('.download').contains(event.target)) {
         closeDownloadOptions()
     }
 })
 
-window.download = (file) => {
-    const element = document.createElement('a');
-    document.body.appendChild(element);
-    element.download = 'Trofimov Daniil CV';
-    element.href = `assets/${file}`;
-    element.click();
-    document.body.removeChild(element);
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        closeDownloadOptions()
+    }
+})
+
+themeToggle.addEventListener('click', () => {
+    const nextTheme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light'
+
+    localStorage.setItem(themeStorageKey, nextTheme)
+    applyTheme(nextTheme)
+})
+
+window.printCv = () => {
+    closeDownloadOptions()
+    window.print()
 }
