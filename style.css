@@ -352,6 +352,10 @@ h1 {
     margin-bottom: 0;
 }
 
+.summary + .summary {
+    margin-top: 1.2em;
+}
+
 .entry {
     margin-bottom: var(--entry-gap);
 }

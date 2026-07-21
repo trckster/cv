@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Daniil Trofimov CV | Senior Engineer</title>
+    <script type="module" src="../main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>CV</text></svg>">
+    <link rel="stylesheet" href="../style.css"/>
+
+    <meta name="description" content="Senior Engineer CV of Daniil Trofimov, a backend-focused engineer with 8+ years of experience building reliable web applications and distributed systems."/>
+    <link rel="canonical" href="https://cv.daniil.online/dev/"/>
+
+    <meta property="og:title" content="Daniil Trofimov | Senior Engineer"/>
+    <meta property="og:description" content="Backend-focused Senior Engineer with 8+ years of experience building reliable web applications, microservices, and distributed systems."/>
+    <meta property="og:type" content="profile"/>
+    <meta property="og:url" content="https://cv.daniil.online/dev/"/>
+    <meta property="og:image" content="https://cv.daniil.online/assets/dev-preview.png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:image:alt" content="Preview of Daniil Trofimov's Senior Engineer CV"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Daniil Trofimov | Senior Engineer"/>
+    <meta name="twitter:description" content="Backend-focused Senior Engineer with 8+ years of experience building reliable web applications, microservices, and distributed systems."/>
+    <meta name="twitter:image" content="https://cv.daniil.online/assets/dev-preview.png"/>
+</head>
+<body>
+<header class="topbar no-print">
+    <span class="brand">Curriculum Vitae</span>
+    <div class="topbar-actions">
+        <div class="download">
+            <button id="download-button" type="button" onclick="showDownloadOptions()" aria-expanded="false" aria-controls="download-options">
+                Download
+                <span aria-hidden="true">↓</span>
+            </button>
+            <ul id="download-options" class="download-options" aria-label="Download options">
+                <li>
+                    <button type="button" onclick="printCv()">Print / Save PDF</button>
+                </li>
+                <li>
+                    <button type="button">Normal PDF and PNG are coming soon</button>
+                </li>
+            </ul>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme">
+            <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M20.2 15.6A8.4 8.4 0 0 1 8.4 3.8a8.8 8.8 0 1 0 11.8 11.8Z"/>
+            </svg>
+            <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<main class="cv" id="profile">
+    <header class="profile-header">
+        <p class="eyebrow">Senior Engineer</p>
+        <h1>Daniil Trofimov</h1>
+        <div class="contact-grid">
+            <span>Turin, Italy</span>
+            <span class="contact-links">
+                <span class="email-contact">
+                    <button class="text-action" type="button" onclick="copyEmail()">
+                        <span id="email">daniil@vivaldi.net</span>
+                    </button>
+                    <span id="email-copy-notification" class="copy-note" aria-live="polite">Copy?</span>
+                </span>
+                <a href="https://github.com/trckster" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://linkedin.com/in/trckster" target="_blank" rel="noreferrer">LinkedIn</a>
+                <a href="https://trckster.t.me" target="_blank" rel="noreferrer">Telegram</a>
+            </span>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="section-heading">
+            <h2>Professional Summary</h2>
+        </div>
+        <p class="summary">
+            Senior Engineer with 8+ years of hands-on experience building web applications and backend systems.
+            My core expertise includes Go (5+ years), PHP (7+ years), TypeScript with Node.js (4+ years), and Vue.js (3+ years), with extensive work on microservices and distributed systems.
+        </p>
+        <p class="summary">
+            I can take ownership of complex backend work from architecture and implementation through rollout and production support, designing reliable systems for concurrency, asynchronous processing, data consistency, graceful failure handling, and high-performance data and messaging.
+            I turn complex product requirements into dependable systems that scale with the business.
+        </p>
+    </section>
+
+    <section class="section" id="experience">
+        <div class="section-heading">
+            <h2>Experience</h2>
+        </div>
+
+        <article class="entry company-entry">
+            <div class="company-head">
+                <div>
+                    <h3><a href="https://mindall.co" target="_blank" rel="noreferrer">Mindall</a></h3>
+                    <p class="company-meta">Dubai, UAE · Remote</p>
+                    <p>Ecosystem of products for housing, real estate agencies, property management, lead processing, employee management, and deal lifecycle automation.</p>
+                </div>
+            </div>
+            <div class="role-list">
+                <section class="role">
+                    <div class="role-head">
+                        <h4>Backend Developer</h4>
+                        <time>Dec 2021 — Jul 2026</time>
+                    </div>
+                    <ul class="dash-list">
+                        <li>Designed and implemented several services within a platform of 30+ microservices, including Go services for telephony, mortgage workflows, collections, and dashboards.</li>
+                        <li>Built a dynamic custom-fields subsystem with typed validation and safe filtering over PostgreSQL JSONB data.</li>
+                        <li>Owned the Stripe subscription lifecycle across checkout, trials, plan changes, signed webhooks, reconciliation, and failure handling.</li>
+                        <li>Built cross-service RBAC and ABAC authorization that translated policies into row-level database constraints for multi-tenant isolation.</li>
+                        <li>Designed a rule-based lead-routing workflow with availability-aware, least-loaded broker assignment.</li>
+                        <li>Built an authentication service with JWT access/refresh tokens, Google OAuth2, and WebAuthn.</li>
+                        <li>Revived automated testing, introduced a code style linter, and set both up in GitLab CI/CD.</li>
+                        <li>Integrated with Facebook, WhatsApp, Instagram, LinkedIn, Twitter, ChatGPT and multiple other external services.</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+
+        <article class="entry company-entry">
+            <div class="company-head">
+                <div>
+                    <h3><a href="https://www.via-mobi.com" target="_blank" rel="noreferrer">ViaMobi</a></h3>
+                    <p class="company-meta">Moscow, Russia · Hybrid</p>
+                    <p>Provider of services delivered in cooperation with Eastern European and West Asian mobile operators.</p>
+                </div>
+            </div>
+            <div class="role-list">
+                <section class="role">
+                    <div class="role-head">
+                        <h4>Backend Developer</h4>
+                        <time>Sep 2020 — Dec 2021</time>
+                    </div>
+                    <ul class="dash-list">
+                        <li>Implemented a monitoring system for partner traffic regulation that calculated subscription KPIs and blocked unreliable sources automatically.</li>
+                        <li>Replaced a high-load database with 20M+ records, reducing select query latency from ~3s to ~100ms.</li>
+                        <li>Maintained the billing core and delivered numerous integrations with mobile operators and traffic sources.</li>
+                        <li>Developed scoreboard ranking logic for an educational platform.</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+
+        <article class="entry company-entry">
+            <div class="company-head">
+                <div>
+                    <h3>Black Wall Group</h3>
+                    <p class="company-meta">Moscow, Russia · On-site</p>
+                    <p>Digital project studio specializing in a wide range of projects, with a particular focus on e-commerce.</p>
+                </div>
+            </div>
+            <div class="role-list">
+                <section class="role">
+                    <div class="role-head">
+                        <h4>Full-stack Developer</h4>
+                        <time>Jan 2018 — Aug 2020</time>
+                    </div>
+                    <ul class="dash-list">
+                        <li>Led the delivery-service integration for an e-commerce platform, coordinating requirements, implementation and multiple delivery partners.</li>
+                        <li>Met with clients to gather feature requirements, documented requested functionality, and delegated implementation tasks.</li>
+                        <li>Configured full-text product search for an online shop using the Sphinx engine.</li>
+                        <li>Developed a large part of the back office across frontend and backend components.</li>
+                        <li>Built a real-time audience polling system for a festival.</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </section>
+
+    <section class="section" id="skills">
+        <div class="section-heading">
+            <h2>Skills & Expertise</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-block">
+                <h3>Primary Stack</h3>
+                <p>Go · PHP (Laravel) · TypeScript (Node.js / Vue.js)</p>
+            </div>
+            <div class="skill-block">
+                <h3>Data & Messaging</h3>
+                <p>MySQL · PostgreSQL · MongoDB · Elasticsearch · Sphinx · ClickHouse · Redis · RabbitMQ · NATS · Apache Kafka</p>
+            </div>
+            <div class="skill-block">
+                <h3>Platform</h3>
+                <p>Linux · Git · Docker · Docker Compose · CI/CD · Nginx · Docker Swarm · Kubernetes</p>
+            </div>
+            <div class="skill-block">
+                <h3>Architecture & Quality</h3>
+                <p>REST · GraphQL · WebSockets · Unit testing · Integration testing · E2E testing · Prometheus · InfluxDB · Grafana</p>
+            </div>
+            <div class="skill-block">
+                <h3>Cloud</h3>
+                <p>AWS · DigitalOcean · Cloudflare · Self-hosting</p>
+            </div>
+            <div class="skill-block">
+                <h3>AI</h3>
+                <p>Claude Code · Codex · OpenCode · OpenRouter API</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="languages">
+        <div class="section-heading">
+            <h2>Languages</h2>
+        </div>
+        <div class="languages-grid">
+            <div class="language-block">
+                <h3>Russian</h3>
+                <p>Native</p>
+            </div>
+            <div class="language-block">
+                <h3>English</h3>
+                <p>Fluent</p>
+            </div>
+            <div class="language-block">
+                <h3>Italian</h3>
+                <p>Pre-Intermediate</p>
+            </div>
+            <div class="language-block">
+                <h3>German</h3>
+                <p>Basic</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="related">
+        <div class="section-heading">
+            <h2>Related</h2>
+        </div>
+        <ul class="dash-list">
+            <li>Built <a href="https://termorize.daniil.online" target="_blank" rel="noreferrer">Termorize</a>, a side project that helps people learn and retain foreign-language vocabulary.</li>
+            <li>Won in multiple CTF cybersecurity competitions during high school and university, developing practical familiarity with web vulnerabilities and cryptography.</li>
+            <li>Studied crypto mechanics in depth and built a side project that interacted programmatically with Bitcoin, Ethereum, and TON.</li>
+            <li>I have 3+ years of experience teaching computer science to teenagers and building educational projects with them.</li>
+            <li>300+ LeetCode problems solved.</li>
+            <li><a href="https://github.com/laravel/framework/pull/45121" target="_blank" rel="noreferrer">Fixed</a> a small bug in Laravel.</li>
+        </ul>
+    </section>
+</main>
+
+<footer class="footer no-print">
+    <span>Last updated: July 2026</span>
+    <a href="#profile">Back to top ↑</a>
+</footer>
+</body>
+</html>
