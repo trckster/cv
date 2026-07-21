@@ -32,18 +32,10 @@
     <span class="brand">Curriculum Vitae</span>
     <div class="topbar-actions">
         <div class="download">
-            <button id="download-button" type="button" onclick="showDownloadOptions()" aria-expanded="false" aria-controls="download-options">
-                Download
-                <span aria-hidden="true">↓</span>
-            </button>
-            <ul id="download-options" class="download-options" aria-label="Download options">
-                <li>
-                    <button type="button" onclick="printCv()">Print / Save PDF</button>
-                </li>
-                <li>
-                    <button type="button">Normal PDF and PNG are coming soon</button>
-                </li>
-            </ul>
+            <a id="download-button" href="../assets/daniil-trofimov-team-lead.pdf" download>
+                Download as PDF
+                <span class="download-arrow" aria-hidden="true">↓</span>
+            </a>
         </div>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme">
             <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24">
@@ -65,10 +57,11 @@
             <span>Turin, Italy</span>
             <span class="contact-links">
                 <span class="email-contact">
-                    <button class="text-action" type="button" onclick="copyEmail()">
-                        <span id="email">daniil@vivaldi.net</span>
+                    <button class="email-copy no-print" type="button" data-email="daniil@vivaldi.net" aria-label="Copy email address">
+                        daniil@vivaldi.net
                     </button>
-                    <span id="email-copy-notification" class="copy-note" aria-live="polite">Copy?</span>
+                    <span class="copy-note no-print" aria-live="polite"></span>
+                    <span class="print-only">daniil@vivaldi.net</span>
                 </span>
                 <a href="https://github.com/trckster" target="_blank" rel="noreferrer">GitHub</a>
                 <a href="https://linkedin.com/in/trckster" target="_blank" rel="noreferrer">LinkedIn</a>
